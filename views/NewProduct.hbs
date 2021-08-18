@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat Product</title>
+    <script src="public/js/bootstrap.min.js"></script>
+    <link rel = "stylesheet" href = "public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<header>
+   <div class = "jumbotron text-center">
+    <h1>Marvel Store</h1>
+    <p>Thanks for visiting our store to invite you to view the product!</p>
+</div> 
+</header>
+</head>
+<body>
+    <div class = "list-group">
+        <a href="/" class="list-group-item list-group-item-action">Home <span class="badge badge-secondary"> <i class="fas fa-home"></i> </span></a>
+        <a href="/show" class="list-group-item list-group-item-action">Show All Product  <span class="badge badge-secondary"> <i class="far fa-eye"></i> </span></a>
+
+    </div>
+     <h1>New Product</h1>
+    <form action = "/doInsert" method="post">
+    <center>
+        Name:         <input type="text" name="txtName" id="">
+                   {{!-- {{error.name}} --}}
+        <br><br>
+        Price:        <input type="text" name="txtPrice" id = "">
+                  
+        <br><br>
+        Color:        <input type ="text" name="txtColor" id="">
+        <br><br>
+        Category :        <input type="text" name="txtCategory" id="">
+        <br><br> 
+         Picture:  <input type="text" name="txtPicture"/>
+        <br><br>
+        <input type="submit" onsubmit="" value ="CREATE A PRODUCT"><br>
+<div class="jumbotron text-center" style="margin-bottom:0">
+    
+<footer>
+    <p5>© 2020 Copyright:  Phạm Van Bien</p5>
+    <i class="fas fa-cloud"></i>
+  <i class="fas fa-coffee"></i>
+  <i class="fas fa-car"></i>
+  <i class="fas fa-file"></i>
+  <i class="fas fa-bars"></i>
+</footer>
+</div>>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+    <link rel = "stylesheet" href = "public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<header>
+   <div class = "jumbotron text-center">
+    <h1>Marvel Store</h1>
+    <p>Thanks for visiting our store to invite you to view the product!</p>
+</div> 
+</header>
+    <script>
+        function  confirmXoa(name){
+            let r = confirm('Do you want to ' + name + '?');
+            return r;
+        }
+    </script>
+    <title>SHOW ALL PRODUCT</title>
+</head>
+<body>
+    <div class = "list-group">
+        <a href="/" class="list-group-item list-group-item-action">Home <span class="badge badge-secondary"> <i class="fas fa-home"></i> </span></a>
+        <a href = "/insert" class="list-group-item list-group-item-action"> New Product  <span class="badge badge-secondary"><i class="fas fa-plus"></i></span></a>
+    </div>
+     <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Color</th>
+                    <th>Category</th>
+                    <th>Picture</th>
+                    <th>Update</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+            {{#each model}}
+                <tr>
+                    <td>{{productName}}</td>
+                    <td>{{price}} VNĐ</td>
+                    <td>{{color}}</td>
+                    <td>{{category}}</td>
+                    <td><center><img src="{{picture}}" width="250" height="200"/></center></td>
+                    <td><a href = "/delete?id={{_id}}" onclick="return confirmXoa('{{productName}}')">Delete</a></td>
+                    <td><a href = "/edit?id={{_id}}">Edit</a></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+<footer>
+    <p5>© 2020 Copyright:  Phạm Van Bien</p5>
+    <i class="fas fa-cloud"></i>
+  <i class="fas fa-coffee"></i>
+  <i class="fas fa-car"></i>
+  <i class="fas fa-file"></i>
+  <i class="fas fa-bars"></i>
+</footer>
+</div>>
+</footer>
+</body>
+</html>
