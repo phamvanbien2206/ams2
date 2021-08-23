@@ -5,7 +5,7 @@ const hbs = require('hbs')
 app.use(express.static(__dirname + '/public'));
 
 const {ObjectId,MongoClient} = require('mongodb');
-const url = 'mongodb+srv://bien2206:bien2206@cluster0.g9h5m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const url = 'mongodb+srv://bien2206:bien2206@cluster0.g9h5m.mongodb.net/test';
 
 app.set('view engine', 'hbs')
 app.use(express.urlencoded({ extended: true }))
