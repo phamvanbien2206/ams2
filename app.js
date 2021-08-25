@@ -60,10 +60,11 @@ app.get('/edit', async (req,res)=>{
     const client = await MongoClient.connect(url);
     const dbo = client.db("ProductDB");
     const results = await dbo.collection('Product').findOne(condition);
-    res.render('Edit', {model: results});
+    
+    res.render('edit', {model: results});
 })
 
-app.post('/doUpdate', async (req,res)=>{
+app.post('/Update', async (req,res)=>{
     const id = req.body.id;
     const nameEdit= req.body.txtName;
     const priceEdit = req.body.txtPrice;
@@ -71,7 +72,7 @@ app.post('/doUpdate', async (req,res)=>{
     const categoryEdit = req.body.txtCategory;
     const pictureEdit = req.body.txtPicture
     const newValues= {$set: {productName: nameEdit, price : priceEdit, color : colorEdit, category : categoryEdit, picture : pictureEdit}};
-    const ObjectID = require('mongodb').ObjectID;
+    const ObjectId = require('mongodb').ObjectId;
     const condition = {"_id" : ObjectId(id)};
 
     const client = await MongoClient.connect(url);
